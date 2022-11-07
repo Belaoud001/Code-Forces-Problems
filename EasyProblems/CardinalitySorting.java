@@ -1,12 +1,10 @@
 package EasyProblems;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class CardinalitySorting {
 
-    public static Integer countOnes(int n) {
+    public static int countOnes(int n) {
         int count = 0;
         String binaryString = Integer.toBinaryString(n);
 
@@ -17,8 +15,26 @@ public class CardinalitySorting {
         return count;
     }
 
+    public static int countOnes2(int n) {
+        String binaryString = Integer.toBinaryString(n);
+
+        List<Character> characterList = new AbstractList<>() {
+                    @Override
+                    public int size() {
+                        return binaryString.length();
+                    }
+
+                    @Override
+                    public Character get(int index) {
+                        return binaryString.charAt(index);
+                    }
+        };
+
+        return Collections.frequency(characterList, '1');
+    }
+
     public static List<Integer> solve(List<Integer> arr) {
-        arr.sort(Comparator.comparing(CardinalitySorting::countOnes));
+        arr.sort(Comparator.comparing(CardinalitySorting::countOnes2));
         return arr;
     }
 
