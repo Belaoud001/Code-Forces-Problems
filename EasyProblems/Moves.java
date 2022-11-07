@@ -3,7 +3,7 @@ package EasyProblems;
 import java.util.Scanner;
 
 public class Moves {
-    //test
+
     public static int solve(int coordinates) {
         if(coordinates % 3 == 0)
             return coordinates / 3;
