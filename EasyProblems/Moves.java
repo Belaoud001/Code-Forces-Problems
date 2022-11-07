@@ -7,7 +7,7 @@ public class Moves {
     public static int solve(int coordinates) {
         if(coordinates % 3 == 0)
             return coordinates / 3;
-        if(coordinates % 3 == 2)
+        else if(coordinates % 3 == 2)
             return coordinates / 3 + 1;
         else
             return (coordinates - 3) / 3 + 2;
