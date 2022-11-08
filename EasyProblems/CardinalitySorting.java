@@ -8,7 +8,7 @@ public class CardinalitySorting {
         int count = 0;
         String binaryString = Integer.toBinaryString(n);
 
-        for(int i = 0; i < binaryString.length(); i++)
+        for (int i = 0; i < binaryString.length(); i++)
             if(binaryString.charAt(i) == '1')
                 count++;
 
@@ -33,8 +33,14 @@ public class CardinalitySorting {
         return Collections.frequency(characterList, '1');
     }
 
+    public static int countOnes3(int n) {
+        if (n == 0)
+            return 0;
+        return (n & 1) + countOnes3(n >>> 1);
+    }
+
     public static List<Integer> solve(List<Integer> arr) {
-        arr.sort(Comparator.comparing(CardinalitySorting::countOnes2));
+        arr.sort(Comparator.comparing(CardinalitySorting::countOnes3));
         return arr;
     }
 

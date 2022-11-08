@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ThirdThreeNumber {
 
     public static void solve(int number) {
-        if(number % 2 == 0)
+        if (number % 2 == 0)
             System.out.println(number / 2 + " " + number / 2 + " 0");
         else
             System.out.println(-1);
@@ -15,7 +15,7 @@ public class ThirdThreeNumber {
         Scanner scanner = new Scanner(System.in);
         int tests = scanner.nextInt();
 
-        for(int i = 0; i < tests; i++)
+        for (int i = 0; i < tests; i++)
             ThirdThreeNumber.solve(scanner.nextInt());
     }
 

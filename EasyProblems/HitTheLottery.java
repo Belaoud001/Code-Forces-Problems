@@ -8,7 +8,7 @@ public class HitTheLottery {
         int[] denominations = new int[]{100, 20, 10, 5, 1};
         int result = 0;
 
-        for(int i = 0; i < 5; i++) {
+        for (int i = 0; i < 5; i++) {
             if(dollars == 0) break;
             result += dollars / denominations[i];
             dollars %= denominations[i];

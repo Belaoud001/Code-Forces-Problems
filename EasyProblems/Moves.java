@@ -17,7 +17,7 @@ public class Moves {
         Scanner scanner = new Scanner(System.in);
         int tests = scanner.nextInt();
 
-        for(int i = 0; i < tests; i++)
+        for (int i = 0; i < tests; i++)
             System.out.println(Moves.solve(scanner.nextInt()));
     }
 
