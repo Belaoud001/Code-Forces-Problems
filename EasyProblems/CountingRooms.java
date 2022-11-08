@@ -1,6 +1,6 @@
 package EasyProblems;
 
-import java.util.Stack;
+import java.util.Scanner;
 
 public class CountingRooms {
 
@@ -46,16 +46,14 @@ public class CountingRooms {
     }
 
     public static void main(String[] args) {
-        grid = new char[][] {
-                {'#', '#', '#', '#', '#', '#', '#', '#'},
-                {'#', '.', '.', '#', '.', '.', '.', '#'},
-                {'#', '#', '#', '#', '.', '#', '.', '#'},
-                {'#', '.', '.', '#', '.', '.', '.', '#'},
-                {'#', '#', '#', '#', '#', '#', '#', '#'}
-        };
+        Scanner scanner = new Scanner(System.in);
+        n = scanner.nextInt();
+        m = scanner.nextInt();
 
-        n = grid.length;
-        m = grid[0].length;
+        grid = new char[n][m];
+
+        for (int i = 0; i < n; i++)
+            grid[i] = scanner.next().toCharArray();
 
         System.out.println(solve());//3
     }
