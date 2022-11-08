@@ -1,6 +1,7 @@
 package EasyProblems;
 
 import java.util.Scanner;
+import java.util.Stack;
 
 public class CountingRooms {
 
@@ -25,11 +26,17 @@ public class CountingRooms {
     }
 
     public static void dfs(Pair cell) {
-        grid[cell.x][cell.y] = '#';
+        Stack<Pair> stack = new Stack<>();
+        stack.push(cell);
 
-        for (int i = 0; i < 4; i++)
-            if (isValid(cell.x + dX[i], cell.y + dY[i]))
-                dfs(new Pair(cell.x + dX[i], cell.y + dY[i]));
+        while (!stack.isEmpty()) {
+            cell = stack.pop();
+            grid[cell.x][cell.y] = '#';
+
+            for (int i = 0; i < 4; i++)
+                if (isValid(cell.x + dX[i], cell.y + dY[i]))
+                    stack.push(new Pair(cell.x + dX[i], cell.y + dY[i]));
+        }
     }
 
     public static int solve() {
