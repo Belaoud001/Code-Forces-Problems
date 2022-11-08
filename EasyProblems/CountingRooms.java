@@ -62,7 +62,7 @@ public class CountingRooms {
         for (int i = 0; i < n; i++)
             grid[i] = scanner.next().toCharArray();
 
-        System.out.println(solve());//3
+        System.out.println(solve());
     }
 
 }
