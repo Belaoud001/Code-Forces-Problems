@@ -7,8 +7,7 @@ public class BanBan {
     static StringBuilder result = new StringBuilder();
 
     public static void solve(int n) {
-        int i = 1;
-        int j = n * 3;
+        int i = 1, j = n * 3;
 
         result.append((n + 1) / 2 + "\n");
 
