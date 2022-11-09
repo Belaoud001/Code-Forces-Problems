@@ -1,4 +1,4 @@
-package EasyProblems;
+package ProblemSolving.CSES;
 
 import java.util.Scanner;
 

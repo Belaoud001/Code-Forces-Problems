@@ -1,4 +1,4 @@
-package EasyProblems;
+package ProblemSolving.CodingForces;
 
 import java.util.*;
 
