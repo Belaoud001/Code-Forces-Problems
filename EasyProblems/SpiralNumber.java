@@ -12,10 +12,10 @@ public class SpiralNumber {
             if (y % 2 == 0)
                 number = (long) y * y - x + 1;
             else
-                number = (long) (y - 1) * (y - 1) + 1 + x - 1;
+                number = (long) (y - 1) * (y - 1) + x;
         else
             if (x % 2 == 0)
-                number = (long) (x - 1) * (x - 1) + 1 + y - 1;
+                number = (long) (x - 1) * (x - 1) + y;
             else
                 number = (long) x * x - y + 1;
 
