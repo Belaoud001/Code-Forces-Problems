@@ -3,6 +3,7 @@ package ProblemSolving.CodingForces;
 import java.util.Scanner;
 
 public class BanBan {
+
     static StringBuilder result = new StringBuilder();
 
     public static void solve(int n) {
@@ -20,7 +21,6 @@ public class BanBan {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         int n = scanner.nextInt();
 
         for (int i = 0; i < n; i++)
