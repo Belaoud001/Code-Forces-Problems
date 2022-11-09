@@ -1,4 +1,4 @@
-package ProblemSolving.CSES;
+package ProblemSolving.CSES.Graphs;
 
 import java.util.*;
 

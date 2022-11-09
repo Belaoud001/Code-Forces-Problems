@@ -3,6 +3,7 @@ package ProblemSolving.CSES.IntroductoryProblems;
 import java.util.Scanner;
 
 public class SpiralNumber {
+
     static StringBuilder result = new StringBuilder();
 
     public static void solve(int y, int x) {
