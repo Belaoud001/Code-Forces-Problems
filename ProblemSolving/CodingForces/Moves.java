@@ -1,4 +1,4 @@
-package ProblemSolving.CSES;
+package ProblemSolving.CodingForces;
 
 import java.util.Scanner;
 

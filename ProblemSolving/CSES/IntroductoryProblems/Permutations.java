@@ -1,4 +1,4 @@
-package ProblemSolving.CSES;
+package ProblemSolving.CSES.IntroductoryProblems;
 
 import java.util.Scanner;
 
