@@ -1,3 +1,5 @@
+package EasyProblems;
+
 import java.util.Scanner;
 
 public class SpiralNumber {
