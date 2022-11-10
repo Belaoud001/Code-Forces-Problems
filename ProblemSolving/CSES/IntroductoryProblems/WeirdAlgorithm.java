@@ -16,9 +16,7 @@ public class WeirdAlgorithm {
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        solve(scanner.nextInt());
+        solve(new Scanner(System.in).nextInt());
         System.out.println(result);
     }
 
