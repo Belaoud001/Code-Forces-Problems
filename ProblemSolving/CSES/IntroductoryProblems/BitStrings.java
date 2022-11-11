@@ -9,6 +9,7 @@ public class BitStrings {
         BigInteger modulo = new BigInteger(String.valueOf(10)).pow(9).add(BigInteger.valueOf(7));
         return new BigInteger(String.valueOf(2)).pow(n).mod(modulo);
     }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println(solve(scanner.nextInt()));
