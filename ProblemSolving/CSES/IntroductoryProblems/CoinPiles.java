@@ -10,18 +10,7 @@ public class CoinPiles {
     static StringBuilder result = new StringBuilder();
 
     public static String solve(long x, long y) {
-        if ((x + y) % 3 != 0)
-            return "NO";
-        else {
-            long max = Math.max(x, y);
-            long min = Math.min(x, y);
-
-            x = max;
-            y = min;
-
-            if (x == y) return "YES";
-            return (x % 2 == 0 && x / 2 == y) ? "YES" : "NO";
-        }
+       //TODO
     }
 
     public static void main(String[] args) {
