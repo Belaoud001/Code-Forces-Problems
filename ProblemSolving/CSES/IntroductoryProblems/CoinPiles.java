@@ -11,6 +11,7 @@ public class CoinPiles {
 
     public static String solve(long x, long y) {
        //TODO
+        return "";
     }
 
     public static void main(String[] args) {

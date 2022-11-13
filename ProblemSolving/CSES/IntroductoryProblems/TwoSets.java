@@ -1,3 +1,5 @@
+package ProblemSolving.CSES.IntroductoryProblems;
+
 import java.util.Scanner;
 
 public class TwoSets {
@@ -10,28 +12,28 @@ public class TwoSets {
         if (sum % 2 == 1) {
             result.append("NO");
             return;
-        } else {
-            long target = sum / 2;
-            long j = n, count;
-
-            while (j <= target) {
-                result.append(j + " ");
-                target -= j;
-                j--;
-            }
-
-            count = n - j;
-            if (target > 0) {
-                result.append(target+ "\n");
-                count++;
-            }
-            result.insert(0, "YES\n" + count + "\n");
-            result.append(n - count + "\n");
-
-            for (int i = 1; i <= j; i++)
-                if (i != target)
-                    result.append(i + " ");
         }
+
+        long target = sum >> 1;
+        long j = n, count;
+
+        while (j <= target) {
+            result.append(j + " ");
+            target -= j;
+            j--;
+        }
+
+        count = n - j;
+        if (target > 0) {
+            result.append(target+ "\n");
+            count++;
+        }
+        result.insert(0, "YES\n" + count + "\n");
+        result.append(n - count + "\n");
+
+        for (int i = 1; i <= j; i++)
+            if (i != target)
+                result.append(i + " ");
     }
 
     public static void main(String[] args) {
