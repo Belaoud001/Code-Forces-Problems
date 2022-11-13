@@ -15,29 +15,18 @@ public class ReOrderPalindrome {
         int start = 0, end = string.length() - 1;
         for (int i = 0; i < 28; i++) {
             if (alphabets[i] != 0) {
-                if (alphabets[i] == 1) {
-                    if (midFound || string.length() % 2 == 0)
-                        return "NO SOLUTION";
-                    palindrome[string.length() / 2] = (char) (65 + i);
-                    midFound = true;
-                    continue;
-                }
-                if (alphabets[i] % 2 == 0) {
-                    for (int j = 0; j < alphabets[i] / 2; j++) {
-                        palindrome[start++] = (char) (65 + i);
-                        palindrome[end--]   = (char) (65 + i);
-                    }
-                } else {
+                if (alphabets[i] % 2 == 0)
+                    for (int j = 0; j < alphabets[i] / 2; j++)
+                        palindrome[start++] = palindrome[end--] = (char) (65 + i);
+                 else {
                     if (midFound || string.length() % 2 == 0)
                         return "NO SOLUTION";
 
                     int middle = string.length() / 2;
                     palindrome[middle] = (char) (65 + i);
 
-                    for (int j = 1; j <= alphabets[i] / 2; j++) {
-                        palindrome[middle - j] = (char) (65 + i);
-                        palindrome[middle + j] = (char) (65 + i);
-                    }
+                    for (int j = 1; j <= alphabets[i] / 2; j++)
+                        palindrome[middle - j] = palindrome[middle + j] = (char) (65 + i);
                     midFound = true;
                 }
             }
