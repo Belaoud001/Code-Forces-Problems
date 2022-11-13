@@ -26,6 +26,7 @@ public class ReOrderPalindrome {
 
                     for (int j = 0; j <= alphabets[i] / 2; j++)
                         palindrome[middle - j] = palindrome[middle + j] = (char) (65 + i);
+
                     midFound = true;
                 }
             }
