@@ -23,9 +23,8 @@ public class ReOrderPalindrome {
                         return "NO SOLUTION";
 
                     int middle = string.length() / 2;
-                    palindrome[middle] = (char) (65 + i);
 
-                    for (int j = 1; j <= alphabets[i] / 2; j++)
+                    for (int j = 0; j <= alphabets[i] / 2; j++)
                         palindrome[middle - j] = palindrome[middle + j] = (char) (65 + i);
                     midFound = true;
                 }
