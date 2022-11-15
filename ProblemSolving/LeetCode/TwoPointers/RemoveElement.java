@@ -3,22 +3,16 @@ package ProblemSolving.LeetCode.TwoPointers;
 public class RemoveElement {
 
     public int removeElement(int[] nums, int val) {
-        int end = nums.length - 1;
-        int i = 0;
-        int counter = 0;
+        int i = 0, counter = 0, end = nums.length - 1;
 
         while(i <= end) {
             if(nums[i] == val) {
-                counter++;
-
                 int temp = nums[end];
-
-                nums[end] = val;
+                nums[end--] = val;
                 nums[i] = temp;
-                end--;
-            } else {
+                counter++;
+            } else
                 i++;
-            }
         }
 
         return nums.length - counter;
