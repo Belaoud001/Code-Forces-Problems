@@ -1,4 +1,4 @@
-package ProblemSolving.CodingForces;
+package ProblemSolving.LeetCode;
 
 import java.util.Scanner;
 
