@@ -7,12 +7,11 @@ public class BreakingPalindrome {
     public static String solve(String input) {
         StringBuilder palindrome = new StringBuilder(input);
         boolean isPossible = false;
-        int i = 0;
 
         if (palindrome.length() == 1)
             return "";
 
-        for (; i < palindrome.length() / 2; i++)
+        for (int i = 0; i < palindrome.length() / 2; i++)
             if (palindrome.charAt(i) != 'a') {
                 palindrome.setCharAt(i, 'a');
                 isPossible = true;
