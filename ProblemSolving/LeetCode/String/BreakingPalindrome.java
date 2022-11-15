@@ -1,4 +1,4 @@
-package ProblemSolving.LeetCode;
+package ProblemSolving.LeetCode.String;
 
 import java.util.Scanner;
 
