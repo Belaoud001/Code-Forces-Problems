@@ -2,11 +2,11 @@ package ProblemSolving.HackerRank.TestOcto;
 
 public class OneMinuteDilemma {
 
-    public static int solve(int[] arr) {
+    public static int solve(int[] numbers) {
         int[] hashTable = new int[60];
         int counter = 0;
 
-        for (int number : arr)
+        for (int number : numbers)
             hashTable[number % 60]++;
 
         // nC2 = n * (n - 1) / 2
