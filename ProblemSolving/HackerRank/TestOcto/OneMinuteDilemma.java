@@ -20,7 +20,7 @@ public class OneMinuteDilemma {
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[]{20, 40, 60, 60, 60};
+        int[] arr = new int[] {20, 40, 60, 60, 60};
 
         System.out.println(solve(arr)); //4
     }
