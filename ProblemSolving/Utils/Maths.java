@@ -1,6 +1,5 @@
 package ProblemSolving.Utils;
 
-
 public class Maths {
 
     public static long factorial(int n) {
