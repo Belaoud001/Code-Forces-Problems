@@ -1,10 +1,11 @@
 package ProblemSolving.CSES.DynamicProgramming;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class MinimizingCoins {
 
-    public static int solve(int[] coins, int target) {
+    public static long solve(int[] coins, int target) {
         int[] dp = new int[target + 1];
 
         Arrays.fill(dp, Integer.MAX_VALUE - 1);
@@ -19,15 +20,22 @@ public class MinimizingCoins {
                 dp[i] = Math.min(dp[i], dp[subTarget] + 1);
             }
 
-        return dp[target];
+        return dp[target] == Integer.MAX_VALUE - 1 ? -1 : dp[target];
     }
 
 
     public static void main(String[] args) {
-        int[] coinsSet = new int[] {1, 5, 7};
-        int target = 11;
+        Scanner scanner = new Scanner(System.in);
+        int[] totalAndTarget = Arrays.stream(scanner.nextLine()
+                                                    .split(" "))
+                                                    .mapToInt(Integer::parseInt)
+                                                    .toArray();
+        int[] coins = Arrays.stream(scanner.nextLine()
+                                           .split(" "))
+                                           .mapToInt(Integer::parseInt)
+                                           .toArray();
 
-        System.out.println(solve(coinsSet, target)); // output : 3 (simply : 5 * 2 + 1)
+        System.out.println(solve(coins, totalAndTarget[1]));
     }
 
 }
