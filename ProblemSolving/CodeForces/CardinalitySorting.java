@@ -34,9 +34,7 @@ public class CardinalitySorting {
     }
 
     public static int countOnes3(int n) {
-        if (n == 0)
-            return 0;
-        return (n & 1) + countOnes3(n >>> 1);
+        return n == 0 ? 0 : (n & 1) + countOnes3(n >>> 1);
     }
 
     public static List<Integer> solve(List<Integer> arr) {
