@@ -11,7 +11,7 @@ public class SherlockAndAnagrams {
         public static int sherlockAndAnagrams(String s) {
             // Write your code here
             Map<String, Integer> subStringsMap = new HashMap<>();
-            String subString = new String();
+            String subString;
 
             for(int i = 0; i < s.length(); i++) {
                 subString = "";
