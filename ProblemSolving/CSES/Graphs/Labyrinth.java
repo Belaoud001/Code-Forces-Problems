@@ -62,27 +62,6 @@ public class Labyrinth {
 
     }
 
-    /*public static void dfs(Pair cell) {
-        if (grid[cell.x][cell.y] == 'B')  {
-            if (path.length() < minimumCost) {
-                minimumCost = path.length();
-                shortestPath = path.toString();
-            }
-        }
-
-        grid[cell.x][cell.y] = '#';
-
-        for (int i = 0; i < 4; i++) {
-            if (isValid(cell.x + dX[i], cell.y + dY[i])) {
-                path.append(directions[i]);
-                dfs(new Pair(cell.x + dX[i], cell.y + dY[i]));
-                path.deleteCharAt(path.length() - 1);
-            }
-        }
-
-        grid[cell.x][cell.y] = '.';
-    }*/
-
     public static void solve() {
         for (int i = 0; i < n; i++)
             for (int j = 0; j < m; j++)
